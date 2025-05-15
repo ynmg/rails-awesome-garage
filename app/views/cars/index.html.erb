@@ -1,0 +1,12 @@
+<h1>Cars Lists</h1>
+<div class="list-group">
+  <div class="list-group-item">
+    <% @cars.each do |car|%>
+      <h3><%= car.brand %><h3>
+      <h4><%= car.model %></h4>
+      <p><%= car.created_at.strftime("%a, %e %b %Y %H:%M:%S %z") %></p>
+      <hr>
+      <hr>
+    <% end %>
+  </div>
+</div>

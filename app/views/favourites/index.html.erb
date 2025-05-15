@@ -1,0 +1,18 @@
+<h1>My garage</h1>
+<div>
+  <% @favourites.each do |favourite| %>
+    <div>
+      <img>
+      <div>
+        <div>
+          <p><strong><%= favourite.car.brand %></strong></p>
+          <p><strong><%= favourite.car.model %></strong></p>
+          <p><%= favourite.car.year %> | <%= favourite.car.fuel %></p>
+        </div>
+        <div>
+          <%= link_to "Delete", car_path(@car) %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

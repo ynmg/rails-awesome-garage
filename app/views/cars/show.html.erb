@@ -1,0 +1,24 @@
+<h1>Car details</h1>
+<div>
+  <h3><%= @car.brand %></h3>
+  <h4><%= @car.model %></h4>
+  <p><%= @car.fuel %></p>
+  <p><%= @car.year %></p>
+  <%= simple_form_for(@favourite, url: favourites_path, method: :post) do |f| %>
+    <%= f.hidden_field :car_id, value: @car.id %>
+    <%= f.submit "Add to my garage" %>
+  <% end %>
+</div>
+  <div>
+  <%= render "reviews/form", car: @car, review:@review %>
+  </div>
+<hr>
+<h3>All Reviews</h3>
+<div class="list-group">
+  <% @car.reviews.each do |review|%>
+    <div class="list-group-item">
+      <p><%= review.comment%> <%= "*" * review.rating.floor %>
+    </div>
+  <% end %>
+</div>
+
