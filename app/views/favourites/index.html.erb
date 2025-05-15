@@ -10,7 +10,8 @@
           <p><%= favourite.car.year %> | <%= favourite.car.fuel %></p>
         </div>
         <div>
-          <%= link_to "Delete", car_path(@car) %>
+          <%# <%= link_to "Delete", favourite_path(favourite), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+          <%= button_to 'Delete', favourite_path(favourite), method: :delete, data: { turbo_confirm: 'Are you sure?' } %>
         </div>
       </div>
     </div>
