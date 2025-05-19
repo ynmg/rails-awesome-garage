@@ -14,17 +14,7 @@ class FavouritesController < ApplicationController
       render "cars/show", status: :unprocessable_entity
       # we are in favourites controller so need to put car
     end
-    # if Favourite.exists?(car_id: @favourite.car_id)
-    #   render "cars/show", status: :unprocessable_entity
-    # else
-    #   @favourite.save
-    #   redirect_to favourites_path
-    # end
   end
-  
-  # def new
-  #   @favourite = Favourite.new
-  # end
 
   def destroy
     @favourite = Favourite.find(params[:id])
@@ -40,3 +30,18 @@ class FavouritesController < ApplicationController
 
 
 end
+
+
+
+
+
+
+
+
+
+    # if Favourite.exists?(car_id: @favourite.car_id)
+    #   render "cars/show", status: :unprocessable_entity
+    # else
+    #   @favourite.save
+    #   redirect_to favourites_path
+    # end

@@ -1,5 +1,5 @@
 <h1>Cars Lists</h1>
-<div class="list-group">
+<div class="card-display">
   <div class="list-group-item">
     <% @cars.each do |car|%>
       <h3><%= link_to car.brand, car_path(car) %><h3>

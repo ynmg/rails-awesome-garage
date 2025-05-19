@@ -1,1 +1,16 @@
 // Specific CSS for your home-page
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  color: white;
+  margin-top:150px;
+}
+.btn-purple {
+  background-color: #573089;
+  color: white;
+}

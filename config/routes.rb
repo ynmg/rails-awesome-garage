@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  # root "cars#index"
+  root "pages#landing"
   resources :cars, only: [ :index, :show ] do
     resources :reviews, only: [ :create ]
     # dun need :new because we create the form in the show page of cars

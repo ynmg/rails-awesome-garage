@@ -23,3 +23,5 @@ car1 = Car.create!(brand: "BMW", model: "MINI Cooper", year: 2021, fuel: "E10 pe
 car2 = Car.create!(brand: "Tesla", model: "Y", year: 2025, fuel: "electricity", owner: grace)
 car3 = Car.create!(brand: "Audi", model: "Q4", year: 2025, fuel: "electricity", owner: mochi)
 puts "#{Owner.count} owners created & #{Car.count} cars created!"
+
+# add migration to Model for image-url

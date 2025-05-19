@@ -4,10 +4,6 @@
   <h4><%= @car.model %></h4>
   <p><%= @car.fuel %></p>
   <p><%= @car.year %></p>
-  <%# <%= simple_form_for(@favourite, url: favourites_path, method: :post) do |f| %>
-    <%# <%= f.hidden_field :car_id, value: @car.id %>
-    <%# <%= f.submit "Add to my garage" %>
-  <%# <% end %>
 
   <% if @car.favourites.empty? %>
   <%# as it's an array %>
@@ -35,3 +31,15 @@
 </div>
 <hr>
 
+
+
+
+
+
+
+
+
+  <%# <%= simple_form_for(@favourite, url: favourites_path, method: :post) do |f| %>
+    <%# <%= f.hidden_field :car_id, value: @car.id %>
+    <%# <%= f.submit "Add to my garage" %>
+  <%# <% end %>

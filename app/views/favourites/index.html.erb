@@ -1,17 +1,18 @@
-<h1>My garage</h1>
-<div>
+<div class="container w-50 container-card-garage">
+  <h1>My Garage</h1>
   <% @favourites.each do |favourite| %>
-    <div>
-      <img>
-      <div>
-        <div>
-          <p><strong><%= favourite.car.brand %></strong></p>
-          <p><strong><%= favourite.car.model %></strong></p>
+    <div class="card-garage">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-garage-infos">
+        <h5 class="text-danger"><%= favourite.car.brand %></h5>
+        <h5><strong><%= favourite.car.model %></strong></h5>
+        <div class="car-garage-remove">
           <p><%= favourite.car.year %> | <%= favourite.car.fuel %></p>
-        </div>
-        <div>
           <%# <%= link_to "Delete", favourite_path(favourite), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-          <%= button_to 'Delete', favourite_path(favourite), method: :delete, data: { turbo_confirm: 'Are you sure?' } %>
+          <%= link_to favourite_path(favourite), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+            <i class="fa-solid fa-trash"></i>
+          <% end %>
+          <%# <%= button_to 'Delete', favourite_path(favourite), method: :delete, data: { turbo_confirm: 'Are you sure?' } %>
         </div>
       </div>
     </div>
